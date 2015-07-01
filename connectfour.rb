@@ -35,7 +35,7 @@ class ConnectFourGame
       puts "PLAYER #{player}: which column would you like to play?"
       col = convert_input(gets.chomp.to_i)
 
-      unless col >= 7 && col < 0 || @game.col_full?(col)
+      unless col >= ConnectFourBoard::WIDTH && col < 0 || @game.col_full?(col)
         @game.place(player, col)
         counter += 1
         break if @game.win? || @game.board_full?
