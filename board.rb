@@ -8,7 +8,6 @@ class ConnectFourBoard
   def initialize
     # 2D array: each array is a column
     @board = Array.new(WIDTH) { Array.new() {nil}}
-    @last_played = [0,0]
   end
 
   def place(piece, col_num)
